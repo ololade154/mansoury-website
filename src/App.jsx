@@ -1,7 +1,12 @@
-import Header from './component/Header';
+import { Route, Routes } from 'react-router';
+import Home from './component/Home';
 
 const App = () => {
-  return <Header />;
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  );
 };
 
 export default App;
