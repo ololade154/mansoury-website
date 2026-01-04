@@ -1,5 +1,11 @@
 import Header from '../component/Header';
+import Hero from '../component/Hero';
 const Home = () => {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <Hero />
+    </>
+  );
 };
 export default Home;

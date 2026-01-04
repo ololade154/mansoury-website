@@ -6,7 +6,7 @@ import MailIcon from '../utilities/MailIcon';
 
 const NavOne = () => {
   return (
-    <div className="monserrat fixed top-0 left-0 w-full py-4 px-8  md:py-6 md:px-28 blue-color z-50 flex items-center justify-between ">
+    <div className="monserrat  w-full py-4 px-8 md:py-6 md:px-28 blue-color z-50 flex items-center justify-between ">
       <div className=" hidden md:flex items-center gap-x-2">
         <p className="text-white text-[14px] font-normal">Follow us:</p>
         <div className="icon">

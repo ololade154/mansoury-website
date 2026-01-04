@@ -5,7 +5,7 @@ import Nav from '../component/Nav';
 import Logo from './Logo';
 const NavTwo = () => {
   return (
-    <div className=" mt-14 border-2 border-indigo-600 fixed top-0 left-0 w-full flex flex-col justify-between items-center gap-y-8 py-4 px-8 md:mt-20 md:flex-row  md:py-4 md:px-28 ">
+    <div className=" white-color w-full flex flex-col justify-between items-center gap-y-8 py-4 px-8 md:py-6 md:px-28 md:flex-row ">
       <div className="flex flex-row items-center gap-x-4 md:flex-row-reverse md:gap-x-20  ">
         <div>
           <Nav />

@@ -22,6 +22,9 @@
 .link-color {
   color: var(--link-color);
 }
+.white-color {
+  background-color: var(--white-color);
+}
 
 .icon {
   background-color: var(--white-color);
