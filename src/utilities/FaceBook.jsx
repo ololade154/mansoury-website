@@ -1,4 +1,4 @@
-const FacebookIcon = ({ height = 32, width = 32 }) => {
+const FaceBook = ({ height = 32, width = 32 }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,4 +13,4 @@ const FacebookIcon = ({ height = 32, width = 32 }) => {
     </svg>
   );
 };
-export default FacebookIcon;
+export default FaceBook;

@@ -1,4 +1,4 @@
-import FacebookIcon from '../utilities/facebookIcon';
+import FaceBook from '../utilities/FaceBook';
 import Twitter from '../utilities/Twitter';
 import InstagramIcon from '../utilities/InstagramIcon';
 import TelIcon from '../utilities/TelIcon';
@@ -16,7 +16,7 @@ const NavOne = () => {
           <Twitter width={18} />
         </div>
         <div className="icon">
-          <FacebookIcon width={21} />
+          <FaceBook width={21} />
         </div>
       </div>
       <div className=" flex-1">
