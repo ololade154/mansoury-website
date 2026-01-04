@@ -4,6 +4,7 @@
   --text-color: red;
   --blue-color: #438db8;
   --white-color: #ffffff;
+  --blue-text: #438db8;
 }
 .montserrat {
   font-family: 'Montserrat', sans-serif;
@@ -13,6 +14,9 @@
 }
 .blue-color {
   background-color: var(--blue-color);
+}
+.blue-text {
+  color: var(--blue-text);
 }
 
 .icon {

@@ -6,7 +6,7 @@ import MailIcon from '../utilities/MailIcon';
 
 const NavOne = () => {
   return (
-    <div className="monserrat fixed top-0 left-0 w-full h-14.5 py-8 px-4 md:h-18.5 md:py-10 md:px-28 blue-color z-50 flex items-center justify-between">
+    <div className="monserrat fixed top-0 left-0 w-full py-4 px-8  md:py-6 md:px-28 blue-color z-50 flex items-center justify-between ">
       <div className=" hidden md:flex items-center gap-x-2">
         <p className="text-white text-[14px] font-normal">Follow us:</p>
         <div className="icon">
@@ -19,8 +19,8 @@ const NavOne = () => {
           <FacebookIcon width={21} />
         </div>
       </div>
-      <div className=" flex-1 text-center">
-        <p className="text-white font-semibold text-[16px]">
+      <div className=" flex-1">
+        <p className="text-white font-semibold text-[16px] text-center">
           Winter is coming! 50% off for new year
         </p>
       </div>
