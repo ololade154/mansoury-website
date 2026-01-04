@@ -15,12 +15,12 @@ const NavTwo = () => {
         </div>
       </div>
       <div className="flex flex-row items-center gap-x-4 ">
-        <div className="flex items-center gap-x-2 border border-[#B4B4B4] py-1 md:py-1.5 px-2">
+        <div className="flex items-center gap-x-1 border border-[#B4B4B4] py-1 md:py-1.5 px-2">
           <div>
             <UserIcon />
           </div>
           <div>
-            <p className="link-color text-[16px] md:text-[14px]">
+            <p className="link-color text-[16px] md:text-[14px] montserrat">
               Register/Login
             </p>
           </div>
