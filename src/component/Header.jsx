@@ -1,5 +1,5 @@
-import NavOne from './NavOne';
-import NavTwo from './NavTwo';
+import NavOne from '../component/NavOne';
+import NavTwo from '../component/NavTwo';
 const Header = () => {
   return (
     <>
