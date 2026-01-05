@@ -41,3 +41,40 @@
   align-items: center;
   justify-content: center;
 }
+.slider-container {
+  position: relative;
+}
+
+.slider-container .slick-dots {
+  bottom: 20px;
+  z-index: 10;
+}
+.slider-container .slick-dots li {
+  margin: 0 12px;
+}
+
+.slider-container .slick-dots li button:before {
+  content: '';
+  width: 30px; /* Rectangle width */
+  height: 5px; /* Rectangle height */
+  background-color: #ffffff; /* Inactive color */
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.slider-container .slick-dots li.slick-active button:before {
+  background-color: var(--blue-text); /* Active color */
+  width: 30px; /* Active indicator can be wider */
+}
+
+.slider-container .slick-dots li button {
+  width: 30px;
+  height: 5px;
+}
+.slider-container .slick-list {
+  overflow: hidden;
+}
+
+.slider-container .slick-slide > div {
+  margin: 0;
+}
