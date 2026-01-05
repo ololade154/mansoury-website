@@ -1,42 +1,47 @@
-// import { NavLink } from 'react-router';
-//
-// const MobileMenu = () => {
-//   return (
-//     <div>
-//       <div className="flex flex-col gap-6 white-color blue-text h-screen w-full abolute z-20 md:hidden text-[16px] md:text-[18px] font-semibold border-2 border-amber-200">
-//         <NavLink to="/">Home</NavLink>
-//         <NavLink to="/">Products</NavLink>
-//         <NavLink to="/">Pages</NavLink>
-//         <NavLink to="/">About Us</NavLink>
-//         <NavLink to="/"> Contact Us</NavLink>
-//       </div>
-//     </div>
-//   );
-// };
-// export default MobileMenu;
 import { NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import SearchIcon from '../utilities/SearchIcon';
+import CartIcon from '../utilities/CartIcon';
+import UserIcon from '../utilities/UserIcon';
 
 const MobileMenu = ({ open }) => {
   return (
     <AnimatePresence>
       {open && (
         <motion.div
-          initial={{ x: '100%' }} // start off-screen RIGHT
-          animate={{ x: 0 }} // move into view
-          exit={{ x: '100%' }} // move back to RIGHT
+          initial={{ x: '100%' }}
+          animate={{ x: 0 }}
+          exit={{ x: '100%' }}
           transition={{
             duration: 0.4,
-            ease: 'easeInOut', // same transition both ways
+            ease: 'easeInOut',
           }}
-          className="fixed right-0 w-full h-screen bg-white z-20 md:hidden"
+          className="fixed right-0 w-full h-screen white-color z-20 md:hidden"
         >
-          <div className="flex flex-col gap-6 p-6 text-lg blue-text md:hidden">
+          <div className="flex flex-col gap-6 p-6 text-lg blue-text md:hidden text-[16px] font-semibold">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/products">Products</NavLink>
             <NavLink to="/pages">Pages</NavLink>
             <NavLink to="/about">About Us</NavLink>
             <NavLink to="/contact">Contact Us</NavLink>
+            <div className="flex md:hidden gap-4 ">
+              <div className="flex items-center gap-x-1 border border-[#B4B4B4] py-1 md:py-1.5 px-2">
+                <div>
+                  <UserIcon />
+                </div>
+                <div>
+                  <p className="link-color text-[16px] md:text-[14px] montserrat">
+                    Register/Login
+                  </p>
+                </div>
+              </div>
+              <div className="border border-[#B4B4B4] p-1.5">
+                <CartIcon />
+              </div>
+              <div className="border border-[#B4B4B4] p-1.5">
+                <SearchIcon />
+              </div>
+            </div>
           </div>
         </motion.div>
       )}
