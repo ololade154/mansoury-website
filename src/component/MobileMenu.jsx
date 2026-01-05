@@ -16,7 +16,7 @@ const MobileMenu = ({ open }) => {
             duration: 0.4,
             ease: 'easeInOut',
           }}
-          className="fixed right-0 w-full h-screen white-color z-20 md:hidden"
+          className="fixed right-0 w-full h-screen white-color z-20"
         >
           <div className="flex flex-col gap-6 p-6 text-lg blue-text md:hidden text-[16px] font-semibold">
             <NavLink to="/">Home</NavLink>
