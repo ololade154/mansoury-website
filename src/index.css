@@ -63,8 +63,8 @@
 }
 
 .slider-container .slick-dots li.slick-active button:before {
-  background-color: var(--blue-text); /* Active color */
-  width: 30px; /* Active indicator can be wider */
+  background-color: var(--blue-text);
+  width: 30px;
 }
 
 .slider-container .slick-dots li button {
@@ -77,4 +77,7 @@
 
 .slider-container .slick-slide > div {
   margin: 0;
+}
+.slick-slide > div {
+  margin: 0 2px;
 }
