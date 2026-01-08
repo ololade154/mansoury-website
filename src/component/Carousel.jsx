@@ -42,9 +42,9 @@ const Carousel = () => {
       <Slider {...settings}>
         <div className="relative block ">
           <img
-            src="/HeroImage.svg"
+            src="/slider-one.png"
             alt="slider"
-            className="object-contain object-center max-w-full h-72 md:h-full w-full block align-bottom"
+            className="object-fit object-center max-w-full h-auto md:h-auto w-full block align-bottom"
           />
           <div className="absolute inset-0 flex justify-center pt-4">
             <h1 className="white-text text-center lato text-[24px] md:text-[48px] font-bold">
@@ -54,9 +54,9 @@ const Carousel = () => {
         </div>
         <div className="relative">
           <img
-            src="/HeroImage.svg"
+            src="/slider-one.png"
             alt="slider"
-            className="object-contain object-center h-72 md:h-full w-full block "
+            className="object-fit object-center h-auto md:h-auto w-full block "
           />
           <div className="absolute inset-0 flex justify-center">
             <h1 className="white-text text-center lato text-[24px] px-4 md:text-[48px] py-4 font-bold">
@@ -66,9 +66,9 @@ const Carousel = () => {
         </div>
         <div className="relative">
           <img
-            src="/HeroImage.svg"
+            src="/slider-one.png"
             alt="slider"
-            className="object-contain object-center h-72 md:h-full w-full block "
+            className="object-fit object-center h-auto md:h-auto w-full block "
           />
           <div className="absolute inset-0 flex justify-center">
             <h1 className="white-text text-center lato text-[24px] px-4 md:text-[48px] py-4 font-bold">

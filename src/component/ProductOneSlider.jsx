@@ -1,36 +1,36 @@
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Slider from 'react-slick';
-import products from './products';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import products from "./products";
 
 const ProductOneSlider = () => {
   var settings = {
     dots: false,
     infinite: false,
     speed: 400,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true, // Arrows enabled for products
+    slidesToShow:4,
+    slidesToScroll: 3,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToShow: 4,
+          slidesToScroll: 3,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 4,
+          slidesToScroll: 4,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToShow: 4,
+          slidesToScroll: 4,
         },
       },
     ],
@@ -58,15 +58,31 @@ const ProductOneSlider = () => {
           font-size: 40px;
           color: #737373;
         }
+
+        .slide-content {
+          padding: 10px;
+          height: 270px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .slide-content img {
+          width: 250px;
+          height: 250px;
+          display: block;
+          object-fit: cover;
+        }
       `}</style>
       <Slider {...settings}>
         {products.map((data) => (
           <div key={data.id}>
-            <img
-              src={data.img}
-              alt={data.name}
-              className="h-60 max-width-full w-60 "
-            />
+            <div className="slide-content">
+              <img
+                src={data.img}
+                alt={data.name}
+              />
+            </div>
           </div>
         ))}
       </Slider>
