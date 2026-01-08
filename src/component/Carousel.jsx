@@ -38,13 +38,25 @@ const Carousel = () => {
     ],
   };
   return (
-    <div className="slider-container max-w-full overflow-hidden  ">
+    <div className="slider-container max-w-full overflow-hidden mb-0 ">
       <Slider {...settings}>
+        <div className="relative block ">
+          <img
+            src="/HeroImage.svg"
+            alt="slider"
+            className="object-contain object-center max-w-full h-72 md:h-full w-full block align-bottom"
+          />
+          <div className="absolute inset-0 flex justify-center pt-4">
+            <h1 className="white-text text-center lato text-[24px] md:text-[48px] font-bold">
+              Ehance Your Home with convience and Style
+            </h1>
+          </div>
+        </div>
         <div className="relative">
           <img
             src="/HeroImage.svg"
             alt="slider"
-            className="object-cover object-center h-72 md:h-105 w-full block"
+            className="object-contain object-center h-72 md:h-full w-full block "
           />
           <div className="absolute inset-0 flex justify-center">
             <h1 className="white-text text-center lato text-[24px] px-4 md:text-[48px] py-4 font-bold">
@@ -56,19 +68,7 @@ const Carousel = () => {
           <img
             src="/HeroImage.svg"
             alt="slider"
-            className="object-cover object-center h-72 md:h-105 w-full block"
-          />
-          <div className="absolute inset-0 flex justify-center">
-            <h1 className="white-text text-center lato text-[24px] px-4 md:text-[48px] py-4 font-bold">
-              Ehance Your Home with convience and Style
-            </h1>
-          </div>
-        </div>
-        <div className="relative">
-          <img
-            src="/HeroImage.svg"
-            alt="slider"
-            className="object-cover object-center h-72 md:h-105 w-full block "
+            className="object-contain object-center h-72 md:h-full w-full block "
           />
           <div className="absolute inset-0 flex justify-center">
             <h1 className="white-text text-center lato text-[24px] px-4 md:text-[48px] py-4 font-bold">

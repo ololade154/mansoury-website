@@ -7,6 +7,7 @@
   --white-color: #ffffff;
   --blue-text: #438db8;
   --link-color: #666666;
+  --background-color: #bebcbd;
 }
 .montserrat {
   font-family: 'Montserrat', sans-serif;
@@ -32,7 +33,9 @@
 .white-text {
   color: var(--white-color);
 }
-
+.background-color {
+  background-color: var(--background-color);
+}
 .icon {
   background-color: var(--white-color);
   padding: 0.02rem 0.4rem;
@@ -43,11 +46,13 @@
 }
 .slider-container {
   position: relative;
+  margin-bottom: 0;
 }
 
 .slider-container .slick-dots {
   bottom: 20px;
   z-index: 10;
+  margin-bottom: 0;
 }
 .slider-container .slick-dots li {
   margin: 0 12px;
@@ -55,9 +60,9 @@
 
 .slider-container .slick-dots li button:before {
   content: '';
-  width: 30px; /* Rectangle width */
-  height: 5px; /* Rectangle height */
-  background-color: #ffffff; /* Inactive color */
+  width: 30px;
+  height: 5px;
+  background-color: #ffffff;
   border-radius: 4px;
   opacity: 1;
 }
@@ -73,11 +78,9 @@
 }
 .slider-container .slick-list {
   overflow: hidden;
+  margin-bottom: 0;
 }
 
-.slider-container .slick-slide > div {
+/* .slider-container .slick-slide > div {
   margin: 0;
-}
-.slick-slide > div {
-  margin: 0 2px;
-}
+} */
