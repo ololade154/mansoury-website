@@ -1,14 +1,14 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import products from "./products";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
+import products from './products';
 
 const ProductOneSlider = () => {
   var settings = {
     dots: false,
     infinite: false,
     speed: 400,
-    slidesToShow:4,
+    slidesToShow: 4,
     slidesToScroll: 3,
     arrows: true,
     responsive: [
@@ -78,10 +78,7 @@ const ProductOneSlider = () => {
         {products.map((data) => (
           <div key={data.id}>
             <div className="slide-content">
-              <img
-                src={data.img}
-                alt={data.name}
-              />
+              <img src={data.img} alt={data.name} />
             </div>
           </div>
         ))}
