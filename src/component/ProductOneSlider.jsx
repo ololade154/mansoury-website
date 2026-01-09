@@ -22,23 +22,27 @@ const ProductOneSlider = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 2,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
   };
 
   return (
-    <div className="product-slider-container">
+    <div className="product-slider-container overflow-hidden w-full max-w-full ">
       <style jsx>{`
+        .product-slider-container .slick-slide > div {
+          margin: 0 10px;
+        }
+
         .product-slider-container .slick-prev,
         .product-slider-container .slick-next {
           z-index: 10;
@@ -46,11 +50,11 @@ const ProductOneSlider = () => {
           height: 40px;
         }
         .product-slider-container .slick-prev {
-          left: 10px;
+          left: 15px;
         }
 
         .product-slider-container .slick-next {
-          right: 10px;
+          right: 15px;
         }
 
         .product-slider-container .slick-prev:before,
@@ -60,25 +64,22 @@ const ProductOneSlider = () => {
         }
 
         .slide-content {
-          padding: 10px;
-          height: 270px;
           display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .slide-content img {
-          width: 250px;
-          height: 250px;
-          display: block;
-          object-fit: cover;
+          justify-content: space-between;
         }
       `}</style>
       <Slider {...settings}>
         {products.map((data) => (
-          <div key={data.id}>
-            <div className="slide-content">
-              <img src={data.img} alt={data.name} />
+          <div key={data.id} className="bg-white md:h-64 p-1 ">
+            <div className=" w-full">
+              <img
+                src={data.img}
+                alt={data.name}
+                className=" h-52 object-cover object-center md:h-44 w-full  "
+              />
+            </div>
+            <div className="">
+              <p>{data.name}</p>
             </div>
           </div>
         ))}

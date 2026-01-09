@@ -14,7 +14,7 @@ const NavTwo = () => {
   return (
     <>
       <nav>
-        <div className="flex justify-between items-center py-4 px-8 md:py-6 md:px-28 w-full montserrat white-color">
+        <div className="flex justify-between items-center py-4 px-8 md:py-6 md:px-28 w-full montserrat body-color">
           {/* logo section */}
           <div>
             <Logo />

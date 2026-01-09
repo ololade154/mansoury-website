@@ -2,8 +2,8 @@ import ProductOneSlider from '../component/ProductOneSlider';
 
 const ProductOne = () => {
   return (
-    <div className="background-color border-2 flex">
-      <div className="flex-none">
+    <div className="body-color flex-col flex md:flex-row overflow-hidden p-4 md:p-8">
+      <div className="flex-none md:w-1/3">
         <h2>Discover Hot Deals For Your Home!</h2>
       </div>
       <div className="flex-1 min-w-0">

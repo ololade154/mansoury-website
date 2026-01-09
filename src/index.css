@@ -8,12 +8,19 @@
   --blue-text: #438db8;
   --link-color: #666666;
   --background-color: #bebcbd;
+  --body-color: #f9f9f9;
+}
+body {
+  background-color: var(--body-color);
 }
 .montserrat {
   font-family: 'Montserrat', sans-serif;
 }
 .lato {
   font-family: 'Lato', sans-serif;
+}
+.body-color {
+  background-color: var(--body-color);
 }
 .text-color {
   color: var(--text-color);
@@ -84,3 +91,6 @@
 /* .slider-container .slick-slide > div {
   margin: 0;
 } */
+.product-slider-container .slick-slide > div {
+  margin: 0 8px;
+}
