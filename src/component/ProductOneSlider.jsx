@@ -1,29 +1,15 @@
-import { useState, useEffect } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import products from './products';
 
 const ProductOneSlider = () => {
-  const [sliderKey, setSliderKey] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setSliderKey((prev) => prev + 1);
-    };
-
-    // Force re-render on mount
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
   var settings = {
     dots: false,
     infinite: false,
     speed: 400,
     slidesToShow: 4,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     arrows: true,
 
     responsive: [
@@ -54,10 +40,12 @@ const ProductOneSlider = () => {
   return (
     <div className="product-slider-container overflow-hidden w-full max-w-full ">
       <style>{`
-        .product-slider-container .slick-slide > div {
-          margin: 0 10px;
-        }
-
+        .product-slider-container .slick-list {
+  margin: 0 -10px;
+}
+.product-slider-container .slick-slide {
+  padding: 0 10px;
+}
         .product-slider-container .slick-prev,
         .product-slider-container .slick-next {
           z-index: 10;
@@ -76,11 +64,6 @@ const ProductOneSlider = () => {
         .product-slider-container .slick-next:before {
           font-size: 40px;
           color: #737373;
-        }
-
-        .slide-content {
-          display: flex;
-          justify-content: space-between;
         }
       `}</style>
       <Slider {...settings}>
