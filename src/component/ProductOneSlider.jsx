@@ -14,10 +14,10 @@ const ProductOneSlider = () => {
 
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 480,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
       {
@@ -28,9 +28,9 @@ const ProductOneSlider = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 4,
           slidesToScroll: 1,
         },
       },
@@ -40,12 +40,12 @@ const ProductOneSlider = () => {
   return (
     <div className="product-slider-container overflow-hidden w-full max-w-full ">
       <style>{`
-        .product-slider-container .slick-list {
-  margin: 0 -10px;
-}
-.product-slider-container .slick-slide {
-  padding: 0 10px;
-}
+         .product-slider-container .slick-list {
+          margin: 0 -10px;
+         }
+        .product-slider-container .slick-slide {
+         padding: 0 10px;
+         }
         .product-slider-container .slick-prev,
         .product-slider-container .slick-next {
           z-index: 10;
