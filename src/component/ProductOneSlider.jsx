@@ -11,6 +11,7 @@ const ProductOneSlider = () => {
     slidesToShow: 4,
     slidesToScroll: 3,
     arrows: true,
+
     responsive: [
       {
         breakpoint: 1024,
@@ -20,9 +21,9 @@ const ProductOneSlider = () => {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -38,7 +39,7 @@ const ProductOneSlider = () => {
 
   return (
     <div className="product-slider-container overflow-hidden w-full max-w-full ">
-      <style jsx>{`
+      <style>{`
         .product-slider-container .slick-slide > div {
           margin: 0 10px;
         }
@@ -75,7 +76,7 @@ const ProductOneSlider = () => {
               <img
                 src={data.img}
                 alt={data.name}
-                className=" h-52 object-cover object-center md:h-44 w-full  "
+                className=" h-36 object-cover object-center md:h-44 w-full  "
               />
             </div>
             <div className="">

@@ -46,7 +46,7 @@ const Carousel = () => {
             alt="slider"
             className="object-fit object-center max-w-full h-auto md:h-auto w-full block align-bottom"
           />
-          <div className="absolute inset-0 flex justify-center pt-4">
+          <div className="absolute inset-0 flex justify-center pt-1 px-2">
             <h1 className="white-text text-center lato text-[24px] md:text-[48px] font-bold">
               Ehance Your Home with convience and Style
             </h1>
