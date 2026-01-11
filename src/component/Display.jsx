@@ -35,7 +35,7 @@ const Display = () => {
               src="/Refrigerator.svg"
               className="w-full h-full object-cover  "
             />
-            <div className="absolute overlay-color right-0 top-1/2 -translate-y-1/2 py-1.5 px-3.5 md:py-2 md:px-12 rounded-l-lg ">
+            <div className="absolute overlay-color right-0 top-1/2 -translate-y-1/2 py-1.5 px-3 md:py-2 md:px-12 rounded-l-lg ">
               <p className="">30% OFF</p>
               <h1>
                 Cool and High Quality
@@ -49,7 +49,7 @@ const Display = () => {
               src="/washing-machine.svg"
               className="w-full h-full object-cover "
             />
-            <div className="absolute overlay-color right-0 top-1/2 -translate-y-1/2 py-1 px-2 md:py-2 md:px-12 rounded-l-lg">
+            <div className="absolute overlay-color right-0 top-1/2 -translate-y-1/2 py-1 px-1 md:py-2 md:px-12 rounded-l-lg">
               <p className="">30% OFF</p>
               <h1>
                 Clean and Gleaming
