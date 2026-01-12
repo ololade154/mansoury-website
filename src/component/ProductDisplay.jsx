@@ -1,4 +1,4 @@
-const Display = () => {
+const ProductDisplay = () => {
   return (
     <div className="grid md:grid-cols-3 gap-4 md:gap-3 md:grid-rows-2 w-full py-4 px-8 md:py-6 md:px-16">
       <div className="h-64 md:h-auto relative">
@@ -69,4 +69,4 @@ const Display = () => {
     </div>
   );
 };
-export default Display;
+export default ProductDisplay;

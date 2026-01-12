@@ -5,7 +5,6 @@ const products = [
     name: 'Bosch 300 Series SHEM63W55N',
     price: 998,
     discountPrice: 1200,
-    cartIcon: 'src/utilities/CartIcon.jsx',
   },
   {
     id: 2,
@@ -13,7 +12,6 @@ const products = [
     name: 'Bosch 300 Series SHEM63W55N',
     price: 998,
     discountPrice: 1200,
-    cartIcon: 'src/utilities/CartIcon.jsx',
   },
   {
     id: 3,
@@ -21,7 +19,6 @@ const products = [
     name: 'Bosch 300 Series SHEM63W55N',
     price: 998,
     discountPrice: 1200,
-    cartIcon: 'src/utilities/CartIcon.jsx',
   },
   {
     id: 4,
@@ -29,7 +26,6 @@ const products = [
     name: 'Bosch 300 Series SHEM63W55N',
     price: 998,
     discountPrice: 1200,
-    cartIcon: 'src/utilities/CartIcon.jsx',
   },
   {
     id: 5,
@@ -37,7 +33,6 @@ const products = [
     name: 'Bosch 300 Series SHEM63W55N',
     price: 998,
     discountPrice: 1200,
-    cartIcon: 'src/utilities/CartIcon.jsx',
   },
   {
     id: 6,
@@ -45,7 +40,6 @@ const products = [
     name: 'Bosch 300 Series SHEM63W55N',
     price: 998,
     discountPrice: 1200,
-    cartIcon: 'src/utilities/CartIcon.jsx',
   },
   {
     id: 7,
@@ -53,7 +47,6 @@ const products = [
     name: 'Bosch 300 Series SHEM63W55N',
     price: 998,
     discountPrice: 1200,
-    cartIcon: 'src/utilities/CartIcon.jsx',
   },
   {
     id: 8,
@@ -61,7 +54,6 @@ const products = [
     name: 'Bosch 300 Series SHEM63W55N',
     price: 998,
     discountPrice: 1200,
-    cartIcon: 'src/utilities/CartIcon.jsx',
   },
   {
     id: 9,
@@ -69,7 +61,6 @@ const products = [
     name: 'Bosch 300 Series SHEM63W55N',
     price: 998,
     discountPrice: 1200,
-    cartIcon: 'src/utilities/CartIcon.jsx',
   },
   {
     id: 10,
@@ -77,15 +68,6 @@ const products = [
     name: 'Bosch 300 Series SHEM63W55N',
     price: 998,
     discountPrice: 1200,
-    cartIcon: 'src/utilities/CartIcon.jsx',
-  },
-  {
-    id: 11,
-    img: '/product11.svg',
-    name: 'Bosch 300 Series SHEM63W55N',
-    price: 998,
-    discountPrice: 1200,
-    cartIcon: 'src/utilities/CartIcon.jsx',
   },
 ];
 export default products;

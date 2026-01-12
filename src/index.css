@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import 'tailwindcss';
 :root {
-  --text-color: red;
+  --red-color: #d72a48;
   --blue-color: #438db8;
   --white-color: #ffffff;
   --blue-text: #438db8;
@@ -11,6 +11,8 @@
   --body-color: #f9f9f9;
   --overlay-color: #00000026;
   --overlay-text-color: #f6f6f6;
+  --product-name-color: #3e3e3e;
+  --discount-price-color: #bebcbd;
 }
 body {
   background-color: var(--body-color);
@@ -50,6 +52,15 @@ body {
 }
 .overlay-text-color {
   color: var(--overlay-text-color);
+}
+.product-name-color {
+  color: var(--product-name-color);
+}
+.discount-price-color {
+  color: var(--discount-price-color);
+}
+.red-color {
+  background-color: var(--red-color);
 }
 .icon {
   background-color: var(--white-color);
