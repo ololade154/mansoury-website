@@ -10,6 +10,7 @@
   --background-color: #bebcbd;
   --body-color: #f9f9f9;
   --overlay-color: #00000026;
+  --overlay-text-color: #f6f6f6;
 }
 body {
   background-color: var(--body-color);
@@ -46,6 +47,9 @@ body {
 }
 .overlay-color {
   background-color: var(--overlay-color);
+}
+.overlay-text-color {
+  color: var(--overlay-text-color);
 }
 .icon {
   background-color: var(--white-color);
