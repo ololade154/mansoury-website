@@ -22,7 +22,7 @@ const Gallery = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-4 w-full py-4 px-8 md:py-6 md:px-32">
+      <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-4 w-full py-4 px-8  md:py-6 md:px-32">
         {visibleItems.map((data, index) => (
           <div
             key={data.id}
@@ -76,7 +76,7 @@ const Gallery = () => {
 
       {/* MOBILE PAGINATION */}
       {isMobile && (
-        <div className="flex justify-center gap-3 mt-3 mb-4">
+        <div className="flex justify-center gap-3 mt-3 ">
           <button
             onClick={() =>
               setCurrentIndex((prev) =>
