@@ -1,53 +1,133 @@
-<div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-4 w-full py-4 px-8 md:py-6 md:px-32">
-  {products.map((data, index) => {
-    const isVisible = !isMobile || index === currentIndex;
+import { useState, useEffect } from 'react';
+import products from './products';
+import CartIcon from '../utilities/CartIcon';
+import HeartIcon from '../utilities/HeartIcon';
+import ArrowLeft from '../utilities/ArrowLeft';
+import ArrowRight from '../utilities/ArrowRight';
 
-    return (
-      <div
-        key={data.id}
-        className={`bg-white md:h-64 p-1.5 shadow-md rounded-sm transition-opacity duration-300 ${
-          isVisible ? 'opacity-100' : 'opacity-0 absolute md:static'
-        }`}
-      >
-        {/* IMAGE WITH OVERLAYS */}
-        <div className="relative w-full">
-          <img src={data.img} alt={data.name} className="w-full object-cover" />
+const Gallery = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
 
-          {/* LEFT CIRCLE */}
-          <div className="absolute top-2 left-2 bg-red-500 w-10 h-10 flex items-center justify-center rounded-full shadow">
-            <span className="text-white text-[10px] font-medium montserrat">
-              50%
-            </span>
-          </div>
+  // Detect screen resize
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 600);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-          {/* RIGHT CIRCLE */}
-          <div className="absolute top-2 right-2 bg-white w-10 h-10 flex items-center justify-center rounded-full shadow">
-            <HeartIcon />
-          </div>
-        </div>
+  // Functions for prev/next buttons
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? products.length - 1 : prev - 1));
+  };
 
-        {/* PRODUCT INFO */}
-        <div className="p-1 montserrat">
-          <h2 className="md:text-[11px] mb-2 font-normal product-name-color">
-            {data.name}
-          </h2>
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === products.length - 1 ? 0 : prev + 1));
+  };
 
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="font-medium md:text-[15px] product-name-color">
-                {data.price}$
+  return (
+    <>
+      <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-4 w-full py-4 px-8 md:py-6 md:px-32">
+        {isMobile ? (
+          // MOBILE: single product with fade transition
+          <div
+            className="relative transition-opacity duration-300 w-full"
+            key={products[currentIndex].id}
+          >
+            <div className="bg-white md:h-64 p-1.5 shadow-md rounded-sm">
+              <div className="relative w-full">
+                <img
+                  src={products[currentIndex].img}
+                  alt={products[currentIndex].name}
+                  className="w-full object-cover"
+                />
+                <div className="absolute top-2 left-2 bg-red-500 w-10 h-10 flex items-center justify-center rounded-full shadow">
+                  <span className="text-white text-[10px] font-medium montserrat">
+                    50%
+                  </span>
+                </div>
+                <div className="absolute top-2 right-2 bg-white w-10 h-10 flex items-center justify-center rounded-full shadow">
+                  <HeartIcon />
+                </div>
               </div>
-              <div className="md:text-[12px] line-through discount-price-color font-medium">
-                {data.discountPrice}$
+              <div className="p-1 montserrat">
+                <h2 className="md:text-[11px] mb-2 font-normal product-name-color">
+                  {products[currentIndex].name}
+                </h2>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="font-medium md:text-[15px] product-name-color">
+                      {products[currentIndex].price}$
+                    </div>
+                    <div className="md:text-[12px] line-through discount-price-color font-medium">
+                      {products[currentIndex].discountPrice}$
+                    </div>
+                  </div>
+                  <div className="blue-color p-1 rounded-sm">
+                    <CartIcon color="#ffffff" width={16} height={16} />
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div className="blue-color p-1 rounded-sm">
-              <CartIcon color="#ffffff" width={16} height={16} />
-            </div>
           </div>
-        </div>
+        ) : (
+          // DESKTOP: render all products
+          products.map((data) => (
+            <div
+              key={data.id}
+              className="bg-white md:h-64 p-1.5 shadow-md rounded-sm"
+            >
+              <div className="relative w-full">
+                <img
+                  src={data.img}
+                  alt={data.name}
+                  className="w-full object-cover"
+                />
+                <div className="absolute top-2 left-2 bg-red-500 w-10 h-10 flex items-center justify-center rounded-full shadow">
+                  <span className="text-white text-[10px] font-medium montserrat">
+                    50%
+                  </span>
+                </div>
+                <div className="absolute top-2 right-2 bg-white w-10 h-10 flex items-center justify-center rounded-full shadow">
+                  <HeartIcon />
+                </div>
+              </div>
+              <div className="p-1 montserrat">
+                <h2 className="md:text-[11px] mb-2 font-normal product-name-color">
+                  {data.name}
+                </h2>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="font-medium md:text-[15px] product-name-color">
+                      {data.price}$
+                    </div>
+                    <div className="md:text-[12px] line-through discount-price-color font-medium">
+                      {data.discountPrice}$
+                    </div>
+                  </div>
+                  <div className="blue-color p-1 rounded-sm">
+                    <CartIcon color="#ffffff" width={16} height={16} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        )}
       </div>
-    );
-  })}
-</div>;
+
+      {/* MOBILE PAGINATION */}
+      {isMobile && (
+        <div className="flex justify-center gap-3 mt-3">
+          <button onClick={handlePrev} className="px-4 py-2 blue-color rounded">
+            <ArrowLeft />
+          </button>
+          <button onClick={handleNext} className="px-4 py-2 blue-color rounded">
+            <ArrowRight />
+          </button>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default Gallery;

@@ -11,7 +11,6 @@ const Home = () => {
       <ProductOne />
       <ProductDisplay />
       <Gallery />
-      <ProductDisplay />
     </>
   );
 };
