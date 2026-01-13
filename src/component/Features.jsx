@@ -1,6 +1,6 @@
 const Features = () => {
   return (
-    <div className="flex flex-col item-center gap-6 md:flex-row md:justify-between md:items-center py-4 px-12 md:py-10 md:px-16">
+    <div className="flex flex-col item-center gap-6 md:flex-row md:justify-between md:items-center py-8 px-12 md:py-10 md:px-16">
       <div className="flex items-center gap-5 md:gap-3">
         <div>
           <img src="/user.svg" />
