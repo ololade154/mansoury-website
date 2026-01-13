@@ -4,6 +4,7 @@ import ProductOne from './ProductOne';
 import ProductDisplay from './ProductDisplay';
 import Gallery from './Gallery';
 import Section from './Section';
+import Features from './Features';
 const Home = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const Home = () => {
       <ProductDisplay />
       <Gallery />
       <Section />
+      <Features />
     </>
   );
 };

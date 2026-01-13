@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 import ArrowRight from '../utilities/ArrowRight';
 const Section = () => {
   return (
-    <div className="relative ">
+    <div className="relative md:px-16">
       <img
         src="/mobileBackground-image.svg"
         alt="image"
