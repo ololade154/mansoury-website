@@ -27,7 +27,7 @@ const Gallery = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-4 w-full py-4 px-8 md:py-6 md:px-32">
+      <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-4 w-full py-4 px-8 md:py-6 md:px-32  md:pb-14">
         {isMobile ? (
           // MOBILE: single product with fade transition
           <div
@@ -75,7 +75,7 @@ const Gallery = () => {
           products.map((data) => (
             <div
               key={data.id}
-              className="bg-white md:h-64 p-1.5 shadow-md rounded-sm"
+              className="bg-white md:h-56 p-1.5 shadow-md rounded-sm"
             >
               <div className="relative w-full">
                 <img
@@ -117,7 +117,7 @@ const Gallery = () => {
 
       {/* MOBILE PAGINATION */}
       {isMobile && (
-        <div className="flex justify-center gap-3 mt-3">
+        <div className="flex justify-center gap-3 mt-3 pb-24">
           <button onClick={handlePrev} className="px-4 py-2 blue-color rounded">
             <ArrowLeft />
           </button>

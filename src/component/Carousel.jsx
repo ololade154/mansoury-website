@@ -42,7 +42,7 @@ const Carousel = () => {
       <Slider {...settings}>
         <div className="relative block ">
           <img
-            src="/slider-one.png"
+            src="/HeroImage.svg"
             alt="slider"
             className="object-fit object-center max-w-full h-auto md:h-auto w-full block align-bottom"
           />
@@ -54,7 +54,7 @@ const Carousel = () => {
         </div>
         <div className="relative">
           <img
-            src="/slider-one.png"
+            src="/HeroImage.svg"
             alt="slider"
             className="object-fit object-center h-auto md:h-auto w-full block "
           />
@@ -66,7 +66,7 @@ const Carousel = () => {
         </div>
         <div className="relative">
           <img
-            src="/slider-one.png"
+            src="/HeroImage.svg"
             alt="slider"
             className="object-fit object-center h-auto md:h-auto w-full block "
           />
