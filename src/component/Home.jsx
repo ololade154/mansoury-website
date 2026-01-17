@@ -5,6 +5,7 @@ import ProductDisplay from './ProductDisplay';
 import Gallery from './Gallery';
 import Section from './Section';
 import Features from './Features';
+import Footer from '../component/Footer';
 const Home = () => {
   return (
     <>
@@ -15,6 +16,7 @@ const Home = () => {
       <Gallery />
       <Section />
       <Features />
+      <Footer />
     </>
   );
 };
