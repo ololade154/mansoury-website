@@ -6,7 +6,7 @@ const ProductOne = () => {
       <div className="flex-none md:w-1/3">
         <h2>Discover Hot Deals For Your Home!</h2>
       </div>
-      <div className="flex-1 min-w-0">
+      <div className="flex-1 mt-[20px] min-w-0">
         <ProductOneSlider />
       </div>
     </div>
