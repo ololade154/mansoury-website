@@ -1,31 +1,41 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import products from './products';
+import { useState } from 'react';
 
 const ProductOneSlider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   return (
     <div className="w-full px-5 py-4">
       <style>{`
+        .swiper-button-prev,
+        .swiper-button-next {
+          color: #374151;
+          width: 40px;
+          height: 40px;
+        }
+        .swiper-button-prev:after,
+        .swiper-button-next:after {
+          font-size: 24px;
+        }
+        
         @media (max-width: 640px) {
           .swiper-button-prev,
           .swiper-button-next {
             display: none;
           }
         }
-        .swiper-pagination-bullet {
-          background: #374151;
-        }
       `}</style>
 
       <Swiper
-        modules={[Pagination, Navigation]}
+        modules={[Navigation]}
         spaceBetween={20}
         slidesPerView={1}
         navigation
-        pagination={{ clickable: true }}
+        onSlideChange={(swiper) => setCurrentIndex(swiper.activeIndex)}
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
@@ -46,6 +56,21 @@ const ProductOneSlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Progress Bar - Only on Mobile */}
+      <div className="block sm:hidden mt-6">
+        <div className="flex items-center gap-3">
+          <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div 
+              className="h-full bg-gray-900 transition-all duration-300 rounded-full"
+              style={{ width: `${((currentIndex + 1) / products.length) * 100}%` }}
+            />
+          </div>
+          <span className="text-sm text-gray-700 font-semibold whitespace-nowrap">
+            {currentIndex + 1}/{products.length}
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
