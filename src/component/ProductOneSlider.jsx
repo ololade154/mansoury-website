@@ -11,41 +11,44 @@ const ProductOneSlider = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
-
     responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true, // Optional: hide arrows on mobile for better UX
         },
       },
     ],
   };
 
   return (
-    <div className="product-slider-container overflow-hidden w-full max-w-full ">
+    <div className="product-slider-container overflow-hidden w-full max-w-full">
       <style>{`
-         .product-slider-container .slick-list {
+        .product-slider-container .slick-list {
           margin: 0 -10px;
-         }
+        }
         .product-slider-container .slick-slide {
-         padding: 0 10px;
-         }
+          padding: 0 10px;
+        }
+        .product-slider-container .slick-slide > div {
+          height: 100%;
+        }
         .product-slider-container .slick-prev,
         .product-slider-container .slick-next {
           z-index: 10;
@@ -55,29 +58,37 @@ const ProductOneSlider = () => {
         .product-slider-container .slick-prev {
           left: 15px;
         }
-
         .product-slider-container .slick-next {
           right: 15px;
         }
-
         .product-slider-container .slick-prev:before,
         .product-slider-container .slick-next:before {
           font-size: 40px;
           color: #737373;
         }
+        @media (max-width: 640px) {
+          .product-slider-container .slick-list {
+            margin: 0 -5px;
+          }
+          .product-slider-container .slick-slide {
+            padding: 0 5px;
+          }
+        }
       `}</style>
       <Slider {...settings}>
         {products.map((data) => (
-          <div key={data.id} className="bg-white md:h-64 p-1 ">
-            <div className=" w-full">
-              <img
-                src={data.img}
-                alt={data.name}
-                className=" h-36 object-cover object-center md:h-44 w-full  "
-              />
-            </div>
-            <div className="">
-              <p>{data.name}</p>
+          <div key={data.id}>
+            <div className="bg-white p-2 sm:p-3 h-full">
+              <div className="w-full mb-2">
+                <img
+                  src={data.img}
+                  alt={data.name}
+                  className="h-40 sm:h-44 md:h-48 w-full object-cover object-center rounded"
+                />
+              </div>
+              <div>
+                <p className="text-sm sm:text-base">{data.name}</p>
+              </div>
             </div>
           </div>
         ))}
