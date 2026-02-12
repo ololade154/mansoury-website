@@ -51,7 +51,9 @@ const ProductOneSlider = () => {
                 alt={data.name}
                 className="h-64 w-full object-cover rounded mb-3"
               />
-              <p className="text-base font-semibold line-clamp-2">{data.name}</p>
+              <p className="text-base font-semibold line-clamp-2">
+                {data.name}
+              </p>
             </div>
           </SwiperSlide>
         ))}
@@ -61,9 +63,11 @@ const ProductOneSlider = () => {
       <div className="block sm:hidden mt-6">
         <div className="flex items-center gap-3">
           <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-            <div 
-              className="h-full bg-gray-900 transition-all duration-300 rounded-full"
-              style={{ width: `${((currentIndex + 1) / products.length) * 100}%` }}
+            <div
+              className="h-full blue-color transition-all duration-300 rounded-full"
+              style={{
+                width: `${((currentIndex + 1) / products.length) * 100}%`,
+              }}
             />
           </div>
           <span className="text-sm text-gray-700 font-semibold whitespace-nowrap">

@@ -1,4 +1,4 @@
-import ProductOneSlider from '../component/ProductOneSlider';
+import ProductOneSlider from './ProductOneSlider';
 
 const ProductOne = () => {
   return (
