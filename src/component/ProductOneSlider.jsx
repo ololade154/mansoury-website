@@ -45,11 +45,11 @@ const ProductOneSlider = () => {
       >
         {products.map((data) => (
           <SwiperSlide key={data.id}>
-            <div className="bg-white p-4 rounded-lg shadow-md">
+            <div className="bg-white rounded-sm shadow-md md:h-64 p-1.5">
               <img
                 src={data.img}
                 alt={data.name}
-                className="h-64 w-full object-cover rounded mb-3"
+                className="w-full object-cover mb-3"
               />
               <p className="text-base font-semibold line-clamp-2">
                 {data.name}
