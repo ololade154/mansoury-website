@@ -6,6 +6,7 @@ import Gallery from './Gallery';
 import Section from './Section';
 import Features from './Features';
 import Footer from '../component/Footer';
+import CopyRight from './CopyRight';
 const Home = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const Home = () => {
       <Section />
       <Features />
       <Footer />
+      <CopyRight />
     </>
   );
 };
