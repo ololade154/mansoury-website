@@ -11,9 +11,9 @@ const Footer = () => {
             Stay Connected
           </h1>
           <p className="mb-1 montserrat text-[14px]">
-            Address:Instabul, Turkey
+            Address: Instabul, Turkey
           </p>
-          <p className="mb-1 montserrat text-[14px]">Phone:(+90)985 98 75</p>
+          <p className="mb-1 montserrat text-[14px]">Phone: (+90)985 98 75</p>
         </div>
         <div className="md:mt-2 mt-6">
           <h2 className="md:mb-3 mb-3 montserrat font-semibold text-[16px]">
