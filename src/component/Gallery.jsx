@@ -27,6 +27,11 @@ const Gallery = () => {
 
   return (
     <>
+      <div className=" text-center md:text-center md:mb-6">
+        <h1 className="montserrat font-bold md:text-[30px] link-color">
+          Products You May Like
+        </h1>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-4 w-full py-4 px-8 md:py-6 md:px-32  md:pb-14">
         {isMobile ? (
           // MOBILE: single product with fade transition
