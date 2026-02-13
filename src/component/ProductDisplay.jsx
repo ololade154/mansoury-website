@@ -1,6 +1,6 @@
 const ProductDisplay = () => {
   return (
-    <div className="grid md:grid-cols-3 gap-4 md:gap-3 md:grid-rows-2 w-full py-4 px-8 md:py-6 md:px-16 md:mb-3 mb-6">
+    <div className="grid md:grid-cols-3 gap-4 md:gap-3 md:grid-rows-2 w-full py-4 px-6 md:py-6 md:px-16 md:mb-3 mb-6">
       <div className="h-64 md:h-auto relative">
         <img src="/microwave.svg" className=" w-full h-full object-cover  " />
         <div className="absolute overlay-color right-0 top-1/2 -translate-y-1/2 py-2 pr-4 pl-2.5 md:py-4 md:pr-4 md:pl-3  rounded-l-lg lato">

@@ -37,7 +37,7 @@ const Gallery = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-4 w-full py-4 px-8 md:py-6 md:px-32  md:pb-14">
+      <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-4 w-full py-4 px-6 md:py-6 md:px-32  md:pb-14">
         {isMobile ? (
           // MOBILE: single product with fade transition
           <div

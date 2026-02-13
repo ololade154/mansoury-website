@@ -1,7 +1,7 @@
 const Features = () => {
   return (
-    <div className="border-b border-b-[#B4B4B4]">
-      <div className="flex flex-col item-center gap-10 md:flex-row md:justify-between md:items-center py-12 px-12 md:py-10 md:px-16">
+    <div className="border-b border-b-[#B4B4B4] mx-8 md:mx-16">
+      <div className="flex flex-col item-center gap-10 md:flex-row md:justify-between md:items-center py-8 md:py-10">
         <div className="flex items-center gap-6 md:gap-4 ">
           <div>
             <img src="/user.svg " className="w-14 h-14" />

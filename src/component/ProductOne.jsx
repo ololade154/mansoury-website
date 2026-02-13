@@ -4,7 +4,7 @@ import ArrowRight from '../utilities/ArrowRight';
 
 const ProductOne = () => {
   return (
-    <div className="body-color flex flex-col md:flex-row  md:gap-7 py-8 px-6 md:w-full md:items-start md:py-6 md:px-10">
+    <div className="body-color flex flex-col md:flex-row  md:gap-7 py-8 px-4 md:w-full md:items-start md:py-6 md:px-10">
       <div className="flex-none md:w-1/4">
         <h2 className="montserrat font-bold text-[35px] md:text-[30px] link-color">
           Discover Hot Deals For Your Home!

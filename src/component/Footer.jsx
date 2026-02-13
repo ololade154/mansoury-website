@@ -4,7 +4,7 @@ import LinkedinIcon from '../utilities/LinkedinIcon';
 import InstagramIcon from '../utilities/InstagramIcon';
 const Footer = () => {
   return (
-    <div className="flex flex-col md:flex-row  items-start md:justify-between md:gap-24 gap-10 py-12 px-12 md:py-10 md:px-16 ">
+    <div className="flex flex-col md:flex-row items-start md:justify-between md:gap-24 gap-10 py-12 px-8 md:py-10 md:px-16 ">
       <div className="w-full">
         <div>
           <h1 className="mb-6  montserrat font-bold text-[20px]">
