@@ -10,14 +10,14 @@ const ProductOneSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <div className="w-full px-5 py-4  ">
+    <div className="w-full px-5 py-4 ">
       <style>{`
         .swiper-button-prev,
         .swiper-button-next {
           color: #374151;
           width: 30px;
           height: 30px;
-          
+
         }
         .swiper-button-prev:after,
         .swiper-button-next:after {
